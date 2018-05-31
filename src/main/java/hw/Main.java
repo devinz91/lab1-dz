@@ -11,9 +11,6 @@ public class Main {
     if (args.length > 0) {
       try {
         max = Integer.parseInt(args[0]);
-        if (max<=0){
-          System.out.println("Enter a positive integer");
-        }
 
       } catch (NumberFormatException e) {
         System.out.println("The argument entered must be an integer ");
@@ -25,10 +22,10 @@ public class Main {
        *and returns to the OS.  So it’s more of a status message to you.
        */
     }
-    FizzBuzz.fizzBuzz(max);
+//    FizzBuzz.fizzBuzz(max);
 
 
-//    System.out.println(Arrays.deepToString(FizzBuzz.fizzBuzz(max)));
+    System.out.println(Arrays.deepToString(FizzBuzz.fizzBuzz(max)));
 
 
 

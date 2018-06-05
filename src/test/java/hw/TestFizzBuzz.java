@@ -3,8 +3,10 @@
 import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.*;
 
 public class TestFizzBuzz {
 
@@ -22,30 +24,30 @@ public class TestFizzBuzz {
 
   @Test
   public void testNegativeTen(){
-    assertNull(fixture.fizzBuzz(-10));
+    assertNull(fixture.fizzBuzzList(-10));
   }
   @Test
   public void testNegativeOne(){
-    assertNull(fixture.fizzBuzz(-1));
+    assertNull(fixture.fizzBuzzList(-1));
   }
   @Test
   public void testZero() {
-    assertNull(fixture.fizzBuzz(0));
+    assertNull(fixture.fizzBuzzList(0));
   }
   @Test
   public void testOne() {
-    String[] expected={"1"};
-    assertArrayEquals(expected, fixture.fizzBuzz(1));
+    List<String> expected= Arrays.asList("1");
+    Assert.assertEquals(expected,fixture.fizzBuzzList(1));
   }
   @Test
   public void testSeven() {
-    String[] expected={"1","2","Fizz","4","Buzz","Fizz","7"};
-    assertArrayEquals(expected, fixture.fizzBuzz(7));
+    List<String> expected= Arrays.asList("1","2","Fizz","4","Buzz","Fizz","7");
+    Assert.assertEquals(expected, fixture.fizzBuzzList(7));
   }
   @Test
   public void testSeventeen() {
-    String[] expected={"1","2","Fizz","4","Buzz","Fizz","7","8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17"};
-    assertArrayEquals(expected, fixture.fizzBuzz(17));
+    List<String> expected= Arrays.asList("1","2","Fizz","4","Buzz","Fizz","7","8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17");
+    Assert.assertEquals(expected, fixture.fizzBuzzList(17));
 
   }
 

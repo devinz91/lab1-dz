@@ -25,7 +25,7 @@ public class Main {
 //    FizzBuzz.fizzBuzz(max);
 
 
-    System.out.println(Arrays.deepToString(FizzBuzz.fizzBuzz(max)));
+    System.out.println(FizzBuzz.fizzBuzzList(max));
 
 
 
